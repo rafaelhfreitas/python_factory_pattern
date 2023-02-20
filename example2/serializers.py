@@ -64,4 +64,4 @@ class SerializerFactory:
 factory = SerializerFactory()
 factory.register_format('JSON', JsonSerializer)
 factory.register_format('XML', XmlSerializer)    
-factory.register_format('YAML', YamlSerializer)    
+factory.register_format('YAML', YamlSerializer) 

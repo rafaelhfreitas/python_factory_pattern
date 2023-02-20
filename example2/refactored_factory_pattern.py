@@ -19,6 +19,10 @@ Traceback (most recent call last):
 ValueError: YAML
 
 
+Todos metodos que não utilizam self devem ser definidos como funções
+Manter apenas self do init para codigo legado, pois se alterar o init, tera que mudar todas as chamadas 
+via objeto para a nova função (sem o self metodo init) mantendo a compatibilidade
+
 """
 
 
