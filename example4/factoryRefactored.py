@@ -98,9 +98,9 @@ class MediaExporterFactory:
 
 
 FACTORIES = {
-    "low": MediaExporter(H264BPVideoExporter, AACAudioExporter),
-    "high": MediaExporter(H264Hi422PVideoExporter, AACAudioExporter),
-    "master": MediaExporter(LosslessVideoExporter, WAVAudioExporter),
+    "low": MediaExporterFactory(H264BPVideoExporter, AACAudioExporter),
+    "high": MediaExporterFactory(H264Hi422PVideoExporter, AACAudioExporter),
+    "master": MediaExporterFactory(LosslessVideoExporter, WAVAudioExporter),
 }   
 
 
@@ -124,10 +124,6 @@ def read_factory() -> MediaExporter:
 
 def do_export(media_exporter: MediaExporter)  -> None:
     """ Do a test export using a video and audio exporter."""
-
-
-    # retrieve  the video and audio exporters
-
     # prepare the export
     media_exporter.video.prepare_export("placeholder_for_video_data")
     media_exporter.audio.prepare_export("placeholder_for_audio_data")
